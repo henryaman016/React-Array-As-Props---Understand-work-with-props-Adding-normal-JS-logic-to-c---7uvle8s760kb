@@ -4,18 +4,19 @@ const arr = JSON.parse(window.localStorage.getItem('props') || `["hello","world"
 const Join = (props) =>{
   return(
     <div id ="join">
+      <div>{props.words.join(",")}</div>
       {/* Access prop 'words' and print it using .join like words.join(',')*/}
     </div>
-  )
-}
+  );
+};
 const App = () => {
 
   return (
     <div id="main">
-      <Join  />
+      <Join words={arr} />
     </div>
-  )
-}
+  );
+};
 
 
 export default App;
